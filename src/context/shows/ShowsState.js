@@ -36,7 +36,9 @@ const ShowsState = ({ children }) => {
   return (
     <ShowsContext.Provider
       value={{
-        ...state,
+        shows: state.shows,
+        singleShow: state.singleShow,
+        loading: state.loading,
         searchShows,
       }}
     >
