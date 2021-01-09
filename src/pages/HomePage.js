@@ -17,7 +17,7 @@ const HomePage = () => {
       {loading ? (
         <h2>Loading..</h2>
       ) : (
-        <div>
+        <div className='homepage__list'>
           {shows.map((item) => (
             <ListItem
               key={item.show.id}
