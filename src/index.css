@@ -1,13 +1,127 @@
+:root {
+  --dark-color: #171717;
+  --secondary-color: #3c948b;
+  --offwhite: #f4f4f4;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Utils */
 .container {
   max-width: 1170px;
   margin: auto;
+}
+
+.btn {
+  padding: 10px 17px;
+  border: 1px solid var(--dark-color);
+  background: var(--dark-color);
+  color: var(--offwhite);
+  margin: 1rem 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--secondary-color);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 1rem;
+  background-color: var(--dark-color);
+}
+
+.navbar__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__brand a {
+  font-size: 1.4rem;
+  color: var(--offwhite);
+  text-decoration: none;
+}
+
+.nav__brand a:hover {
+  color: var(--secondary-color);
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.links__link a {
+  display: block;
+  padding: 1rem;
+  color: var(--offwhite);
+  text-decoration: none;
+  margin-left: 0.5rem;
+  border: 1px solid var(--dark-color);
+  font-size: 20px;
+}
+
+.links__link a:hover {
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/* SearchBar Styles */
+.searchbar {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.searchbar__form > input {
+  width: 100%;
+  padding: 10px 17px;
+  border: 1px solid var(--dark-color);
+  background: var(--offwhite);
+  color: var(--dark-color);
+  font-size: 20px;
+  outline-width: 0ch;
+}
+
+.searchbar__form > input:focus {
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 0 1px 1px rgba(60, 148, 139, 0.5);
+}
+
+/* Alert Styles */
+.alert {
+  padding: 10px 17px;
+  font-size: 20px;
+  border: 1px solid var(--dark-color);
+  margin: 1rem 0;
+}
+
+.alert-warning {
+  background: #f8ffc4;
+  border: 1px solid #ffee00;
+}
+
+.alert-danger {
+  background: #ffc4c4;
+  border: 1px solid #ff0000;
+}
+
+.alert-info {
+  background: #d7eafe;
+  border: 1px solid #0523b7;
 }
