@@ -6,6 +6,7 @@ import ShowsContext from '../context/shows/showsContext';
 // Components
 import SearchBar from '../components/SearchBar';
 import ListItem from '../components/ListItem';
+import Loader from '../components/Loader';
 
 const HomePage = () => {
   const showsContext = useContext(ShowsContext);
@@ -15,7 +16,7 @@ const HomePage = () => {
     <div className='homepage'>
       <SearchBar />
       {loading ? (
-        <h2>Loading..</h2>
+        <Loader />
       ) : (
         <div className='homepage__list'>
           {shows.map((item) => (
